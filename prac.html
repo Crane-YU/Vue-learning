@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- 创建容器 -->
+	<div id = "app">
+		{{msg}}
+	</div>
+	<div id = "app-2">
+		<span v-bind:title="message">
+			鼠标悬停几秒钟查看此处动态绑定的提示信息！
+		</span>
+	</div>
+	<div id = "app-3">
+		<span v-html="message">
+		</span>
+	</div>
+	<div id = "app-4">
+		<span v-text="message">
+		</span>
+	</div>
+	<div id = "app-5">
+		<a :href="url" :title="msg">百度</a>
+	</div>
+
+	<script>
+		// 创建vue实例
+		var1 = new Vue({
+			el: "#app",
+			data:{
+				msg: 'hello'
+			}
+
+		});
+
+		var2 = new Vue({
+			el: "#app-2",
+			data:{
+				message: '页面加载于 ' + new Date().toLocaleString()
+			}
+		});
+
+		var3 = new Vue({
+			el: "#app-3",
+			data:{
+				message: "<h1> hello world </h1>"
+			}
+		});
+
+		var4 = new Vue({
+			el: "#app-4",
+			data:{
+				message: "<h1> hello world </h1>"
+			}
+		});
+		var5 = new Vue({
+			el: "#app-5",
+			data:{
+				url: "http://www.baidu.com",
+				msg: "跳转到百度"
+			}
+		})
+
+	</script>
+</body>
+</html>

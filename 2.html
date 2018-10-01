@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-model</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<form action="">
+			<input type="text" name="username" v-model="msg"> {{msg}}
+			<br>
+			<input type="radio" name="sex" v-model="sex" value="male">
+			<input type="radio" name="sex" v-model="sex" value="female"> {{sex}}
+			<br>
+			<input type="checkbox" name="live" value="1" v-model="live"> 
+			<input type="checkbox" name="live" value="2" v-model="live"> {{live}}
+			<br>
+			<input type="checkbox" name="change" value="1" v-model="change">
+			<input type="checkbox" name="change" value="2" v-model="change">
+			<input type="checkbox" name="change" value="3" v-model="change"> {{change}}
+			<br>
+			<select name="" id="" v-model="select">
+				<option value="1">北京</option>
+				<option value="2">广州</option>
+				<option value="3">上海</option>
+			</select>
+			{{select}}
+				
+			
+		</form>
+	</div>
+
+	<script>
+		var1 = new Vue({
+			el:"#app",
+			data: {
+				msg: "123",
+				sex: "female",
+				live:"",
+				change:[],
+				select: ""
+			}
+		});
+
+
+	</script>
+</body>
+</html>

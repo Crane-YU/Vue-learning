@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-if</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style>
+		.box1{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background: green;
+		}
+		.box3{
+			width: 200px;
+			height: 200px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div class="box1" v-if="1>=0">1</div>
+		<div class="box2" v-else-if="1<0">2</div>
+		<div class="box3" v-else>3</div>
+		<div class="box2" v-show="false">4</div>
+	</div>
+	
+	<script>
+		var1 = new Vue({
+			el: "#app",
+			data: {
+
+			}
+		})
+	</script>
+</body>
+</html>

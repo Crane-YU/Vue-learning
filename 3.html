@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-for</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="i in arr">
+			{{i}}
+			</li>
+		</ul>
+		<ul>
+			<li v-for="(v, index) in arr" :key="index">
+				{{v}} -------> {{index}}
+			</li>
+		</ul>
+		<ul>
+			<li v-for="(value, key) in obj">
+				{{key}}: {{value}}
+			</li>
+		</ul>
+	</div>
+
+	<script>
+		var1 = new Vue({
+			el: "#app",
+			data: {
+				arr: ["铅笔", "钢笔", "圆珠笔", "签字笔"],
+				obj: {
+					name: "张三",
+					sex: "male",
+					height: "180cm"
+				}
+			}
+		})
+
+	</script>
+</body>
+</html>
